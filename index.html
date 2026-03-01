@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王里鑫的工作 - 记事本</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">王里鑫的工作</h1>
+            <p class="subtitle">高效工作，记录每一个灵感</p>
+        </header>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="newNoteBtn">
+                <span class="btn-icon">+</span>
+                新建笔记
+            </button>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索笔记...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <div class="notes-grid" id="notesGrid">
+            <!-- 笔记将在这里动态生成 -->
+        </div>
+
+        <div class="modal" id="noteModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle">新建笔记</h2>
+                    <button class="close-btn" id="closeModal">×</button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="noteTitle" placeholder="笔记标题" class="note-input">
+                    <textarea id="noteContent" placeholder="开始书写你的想法..." class="note-textarea"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="cancelBtn">取消</button>
+                    <button class="btn btn-primary" id="saveBtn">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
